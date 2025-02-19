@@ -1,6 +1,8 @@
 import { faker } from "@faker-js/faker";
 import { Todo } from "../types/todo";
 
+faker.seed(1337);
+
 const generateMockTodos = (count: number = 4): Todo[] => {
   return Array.from({ length: count }, (_, index) => {
     // Generate assigned first since status depends on it
